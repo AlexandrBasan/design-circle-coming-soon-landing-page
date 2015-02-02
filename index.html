@@ -8,13 +8,14 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <title>Counter - Coming Soon Theme</title>
+    <title>Proalab.com Design Team | Coming Soon landing page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/soon.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -48,13 +49,62 @@
             <!-- END TIMER -->
             <div class="col-lg-4 col-lg-offset-4 mt centered">
             	<h4>LET ME KNOW WHEN YOU LAUNCH</h4>
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <label class="sr-only" for="exampleInputEmail2">Email address</label>
-				    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-				  </div>
-				  <button type="submit" class="btn btn-info">Submit</button>
-				</form>            
+                <!-- Mailchimp subscribe -->
+                <form class="form-inline validate signup" action="http://mailchimp_link" method="get" role="form">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="EMAIL" id="exampleInputEmail1" placeholder="Enter your email">
+                    </div>
+                    <input type="submit" name="subscribe" value="Get notified!" class="btn btn-success">
+                </form>
+                <!-- Mailchimp subscribe -->
+                <!-- Mailchimp subscribe -->
+                <!--
+                <script src="http://downloads.mailchimp.com/js/jquery.form-n-validate.js"></script>
+                <script>
+
+            $(document).ready( function () {
+                $('#wrapper').height($(document).height());
+                // I only have one form on the page but you can be more specific if need be.
+                var $form = $('form');
+
+                if ( $form.length > 0 ) {
+                    $('form input[type="submit"]').bind('click', function ( event ) {
+                        if ( event ) event.preventDefault();
+                        // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+                        if ( $form.validate() ) { register($form); }
+                    });
+                }
+            });
+
+            function appendResult(userText , className, iconClass){
+              var resultHTML = "<div class='stretchLeft result "+ className + "'>" + userText + " <span class='fa fa-" + iconClass + "'></span>" + "</div>";
+              $('body').append(resultHTML);
+              $('.result').delay(10000).fadeOut('1000');
+            }
+
+
+            function register($form) {
+                $.ajax({
+                    type: $form.attr('method'),
+                    url: $form.attr('action'),
+                    data: $form.serialize(),
+                    cache       : false,
+                    dataType    : 'json',
+                    contentType: "application/json; charset=utf-8",
+                    error       : function(err) { alert("Could not connect to the registration server. Please try again later."); },
+                    success     : function(data) {
+                        if (data.result != "success") {
+                            appendResult('Wrong Email Or You Are Already Registered, Try Again', 'error', 'exclamation');
+                        } else {
+                            // It worked, carry on...
+                            appendResult('Successful, Check Your Email For Confirmation ', 'success', 'check');
+                        }
+                    }
+                });
+            }
+                </script>
+                -->
+                <!-- Mailchimp subscribe -->
 			</div>
             
         </div>
@@ -85,7 +135,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/soon/plugins.js"></script>
